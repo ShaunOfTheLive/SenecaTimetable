@@ -1,0 +1,28 @@
+def create_html_table(table)
+  html_out = <<eos
+<html>
+  <head>
+    <title>Test</title>
+  </head>
+  <body>
+    <table border="1">
+eos
+
+  table.each do |row|
+    html_out += " "*6 + "<tr>" + "\n"
+    row.each do |column| 
+      html_out += " "*8 + "<td>"
+      html_out += column.join("<br />\n" + " "*12)
+      html_out += "</td>" + "\n"
+    end
+    html_out += " "*6 + "</tr>" + "\n"
+  end
+
+  html_out += <<eos
+    </table>
+  </body>
+</html>
+eos
+
+end
+

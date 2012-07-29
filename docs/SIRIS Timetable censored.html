@@ -1,0 +1,510 @@
+
+
+
+
+
+
+        
+        
+        
+
+
+<HTML>
+<head>
+<title>SIRIS - Student Timetable</title>
+<LINK REL="SHORTCUT ICON" HREF="/webapps/sirismain/images/siristumb.ico">
+<!-- AS: ASBob -->
+<!-- JE: null -->
+
+
+<link rel="stylesheet" href="/webapps/sirismain/style3.css">
+<SCRIPT LANGUAGE="JavaScript">
+function CreateWindow(help)
+{
+     helpWindow=window.open('','msgWindow', 'toolbar=no,width=500,height=350,directories=no, status=yes,scrollbars=yes,resize=yes,menubar=no')
+     helpWindow.document.writeln('<HTML>')
+     helpWindow.document.writeln('<HEAD>')
+     helpWindow.document.writeln('<TITLE>SIRIS Help</TITLE>')
+     helpWindow.document.writeln('<FRAMESET ROWS="*,36">')
+     helpWindow.document.writeln('  <FRAME SRC="http://www.senecac.on.ca',help,'" NAME="helptext">')
+     helpWindow.document.writeln('  <FRAME SRC="http://www.senecac.on.ca/siris/help/usingsiris_files/siris2helpbar.html" NAME="helpbar" SCROLLING="NO" MARGINWIDTH="0" MARGINHEIGHT="0">')
+     helpWindow.document.writeln('</FRAMESET>')
+     helpWindow.document.writeln('</HEAD>')
+     helpWindow.document.writeln('</HTML>')
+     helpWindow.document.close()
+}
+</SCRIPT>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-23033382-4']);
+  
+  _gaq.push(['_trackPageview','/siris/rego/timetableview']);
+  
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+<body id="ground">
+<div align="center">
+ <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
+    <TR>
+       <TD ROWSPAN=2><IMG SRC="/webapps/sirismain/images/siris_logo.gif" WIDTH=179 HEIGHT=62></TD>
+       <TD><IMG SRC="/webapps/sirismain/images/siris_bar.gif" WIDTH=236 HEIGHT=31></TD>
+       <TD COLSPAN=4><IMG SRC='/webapps/sirismain/images/student_timetable.gif' WIDTH='270' HEIGHT='31'></TD>
+    </TR>
+    <TR>
+       <TD><IMG SRC="/webapps/sirismain/images/spacer.gif" WIDTH=236 HEIGHT=31></TD>
+       <TD><IMG SRC="/webapps/sirismain/images/spacer.gif" WIDTH=35 HEIGHT=31></TD>
+       <TD><A HREF="javascript:CreateWindow('/siris/help/about.html')"><IMG SRC="/webapps/sirismain/images/aboutsiris_05.gif" WIDTH='87' height='31' alt='About SIRIS' border='0'></A></TD>
+       <FORM action='/NASApp/regwsirismain/logout.jsp' method='POST' name='exitsiris'>
+       <input type=hidden name="GXHC_JSESSIONID" value="d8bd6e9c28fb9ae3">
+       <TD><INPUT type='image' SRC="/webapps/sirismain/images/exitsiris_06.gif" WIDTH='77' height='31' name='Exit SIRIS' border='0'></TD>
+       </FORM>
+       <TD><A HREF="javascript:CreateWindow('/siris/help/usingsiris_files/siris2help.html')"><IMG SRC="/webapps/sirismain/images/help_07.gif" WIDTH="71" height="31" alt='SIRIS Help' border='0'></A></TD>
+    </TR>
+ </TABLE>
+
+<p>
+</div>
+
+
+
+
+<div align="center">
+<table border="1" cellpadding="2" cellspacing="1" width="675">
+<tr>
+<td id="cell03"><a href="/NASApp/regwsirismain/requestControl?GXHC_JSESSIONID=d8bd6e9c28fb9ae3&menuItem=1&getAcademic=1">Academic Record</a></td>
+<td id="cell03"><a href="/NASApp/regwsirismain/requestControl?GXHC_JSESSIONID=d8bd6e9c28fb9ae3&menuItem=4&getAcademic=1">Account Information</a></td>
+<td id="cell03"><a href="/NASApp/regwsirismain/requestControl?GXHC_JSESSIONID=d8bd6e9c28fb9ae3&menuItem=8&getContact=1">Contact Information</a></td>
+
+
+<td id="cell03"><a href="/NASApp/regwsirismain/requestControl?GXHC_JSESSIONID=d8bd6e9c28fb9ae3&menuItem=2&getGrades=1">Current Grades</a></td>
+
+<td id="cell03"><a href="/NASApp/regwsirismain/requestControl?GXHC_JSESSIONID=d8bd6e9c28fb9ae3&menuItem=3&getInvoice=1">Fees Invoice</a></td>
+<td id="cell03"><a href="/NASApp/tuitiontaxreturn/requestControl?GXHC_JSESSIONID=d8bd6e9c28fb9ae3&menuItem=62&getTaxForm=2">Tax Receipt</a></td> 
+</tr>
+<tr>
+
+<td id="cell03"><a href="/NASApp/regwsirismain/requestControl?GXHC_JSESSIONID=d8bd6e9c28fb9ae3&menuItem=5&getPCurriculum=1">Personal Curriculum</a></td>
+
+
+<td id="cell03"><a href="/NASApp/wregsiris/pinStim.jsp?GXHC_JSESSIONID=d8bd6e9c28fb9ae3&stimoption=rego">Registration Options</a></td>
+
+<td id="cell03"><a href="/NASApp/wregsiris/pinStim.jsp?GXHC_JSESSIONID=d8bd6e9c28fb9ae3&stimoption=stim">Student Timetable</a></td>
+
+
+<td id="cell03"><a href="/NASApp/wregsiris/callPreview.jsp?GXHC_JSESSIONID=d8bd6e9c28fb9ae3&menuItem=9&getPreview=1">Preview Subjects</a></td>
+
+ 
+
+<td><a href="/NASApp/regwsirismain/requestControl?GXHC_JSESSIONID=d8bd6e9c28fb9ae3&menuItem=25">Exam Schedule</a></td> 
+
+
+
+
+        <td><a rel="P3Pv1" href="/NASApp/finaid/requestControl?GXHC_JSESSIONID=d8bd6e9c28fb9ae3&menuItem=67">Financial Aid</a></td> 
+</tr>
+</table>
+<br>
+</div>
+
+
+        
+                
+
+
+
+
+
+
+
+
+
+                    
+                    <p align="center">
+                    <a href="#" onclick="javascript:print();"><IMG src='/webapps/sirismain/images/print.gif' border='0'></A>
+                    </p>
+                    
+                <CENTER>
+                
+
+
+
+
+
+            
+
+
+<P>
+<CENTER>
+<TABLE WIDTH='675' BORDER='1' CELLPADDING='10'><TR>
+<TD id='important'>
+Note: All timetables are subject to change up until the first day of classes. 
+Please ensure that you log into SIRIS and re-print your timetable to ensure that you have the most current version.
+</TD></TR></TABLE></CENTER>
+<p><table border='1' width='90%' cellpadding='3' cellspacing='1'>
+<tr><td id='subheadbgl' colspan='6'>
+<table width='100%' border='0' cols='4'>
+<tr><th colspan='4' id='head2'>Timetable
+for: 2012/01/09 to 2012/02/26</th></tr>
+<tr><td id='subhead'>Name:</td><td id='subhead'>SHAUN [redacted]</td><td id='subhead'>Date of Printing:</td><td id='subhead'>2012/03/09&nbsp;02:21:33</td></tr>
+<tr><td id='subhead'>Semester and Year:</td><td id='subhead'>Winter 2012</td><td id='subhead'>Faculty/Location:</td><td id='subhead'>STSY</td></tr>
+<tr valign="top"><td id='subhead'>Program and Semester:</td><td id='subhead'>COMPUTER PROGRAMMING AND ANALYSIS 5</td><td id='subhead'>School:</td><td id='subhead'>INFORMATION & COMMUNICATIONS TECHNOLOGY</td></tr>
+</table>
+</td></tr>
+<tr><td id='subheadbgl'>&nbsp;</td><th id='subheadbgl'>Monday</th><th id='subheadbgl'>Tuesday</th><th id='subheadbgl'>Wednesday</th><th id='subheadbgl'>Thursday</th><th id='subheadbgl'>Friday</th></tr>
+<tr>
+<td id='bold'>&nbsp;8:00</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+</tr>
+<tr>
+<td id='bold'>&nbsp;8:55</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+</tr>
+<tr>
+<td id='bold'>&nbsp;9:50</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' bgcolor='#FFE7C6'>
+DCN455A 
+<br>T. Alam<br>T3135
+</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' bgcolor='#FFE7C6'>
+DCN455A 
+<br>T. Alam<br>T3132
+</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+</tr>
+<tr>
+<td id='bold'>10:45</td>
+<td id='bold' bgcolor='#FFFF10'>
+EAC397YD
+<br>M. Kampherm<br>S2155
+</td>
+<td id='bold' bgcolor='#FFE7C6'>
+DCN455A 
+<br>T. Alam<br>T3135
+</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' bgcolor='#FFE7C6'>
+DCN455A 
+<br>T. Alam<br>T3132
+</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+</tr>
+<tr>
+<td id='bold'>11:40</td>
+<td id='bold' bgcolor='#63C6DE'>
+SYS466B 
+<br>M. Walton<br>T3074
+</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+</tr>
+<tr>
+<td id='bold'>12:35</td>
+<td id='bold' bgcolor='#63C6DE'>
+SYS466B 
+<br>M. Walton<br>T3074
+</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+</tr>
+<tr>
+<td id='bold'>13:30</td>
+<td id='bold' bgcolor='#FF9C4A'>
+EAC237YA
+<br>M. Boyle-Taylor<br>S1201
+</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' bgcolor='#FF9C4A'>
+EAC237YA
+<br>M. Boyle-Taylor<br>S1201
+</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+</tr>
+<tr>
+<td id='bold'>14:25</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' bgcolor='#FF9C4A'>
+EAC237YA
+<br>M. Boyle-Taylor<br>S1201
+</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+</tr>
+<tr>
+<td id='bold'>15:20</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' bgcolor='#63C6DE'>
+SYS466B 
+<br>M. Walton<br>T3073
+</td>
+<td id='bold' bgcolor='#FFFF10'>
+EAC397YD
+<br>M. Kampherm<br>T3080
+</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+</tr>
+<tr>
+<td id='bold'>16:15</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' bgcolor='#63C6DE'>
+SYS466B 
+<br>M. Walton<br>T3073
+</td>
+<td id='bold' bgcolor='#FFFF10'>
+EAC397YD
+<br>M. Kampherm<br>T3080
+</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+</tr>
+<tr>
+<td id='bold'>17:10</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+</tr>
+<tr>
+<td id='bold'>18:05</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+</tr>
+<tr><th colspan='6' align='center' id='subheadbgl'>14 HOURS per week</th></tr>
+</table>
+<hr width='90%' size='2' style='color: maroon;'/>
+<hr width='90%' size='2' style='color: maroon;'/>
+<P><div id='headsmall' align='center'>No Standard Timetable for time period: 2012/02/27 to 2012/03/04</div>
+<hr width='90%' size='2' style='color: maroon;'/>
+<hr width='90%' size='2' style='color: maroon;'/>
+<p><table border='1' width='90%' cellpadding='3' cellspacing='1'>
+<tr><td id='subheadbgl' colspan='6'>
+<table width='100%' border='0' cols='4'>
+<tr><th colspan='4' id='head2'>Timetable
+for: 2012/03/05 to 2012/04/22</th></tr>
+<tr><td id='subhead'>Name:</td><td id='subhead'>SHAUN [redacted]</td><td id='subhead'>Date of Printing:</td><td id='subhead'>2012/03/09&nbsp;02:21:33</td></tr>
+<tr><td id='subhead'>Semester and Year:</td><td id='subhead'>Winter 2012</td><td id='subhead'>Faculty/Location:</td><td id='subhead'>STSY</td></tr>
+<tr valign="top"><td id='subhead'>Program and Semester:</td><td id='subhead'>COMPUTER PROGRAMMING AND ANALYSIS 5</td><td id='subhead'>School:</td><td id='subhead'>INFORMATION & COMMUNICATIONS TECHNOLOGY</td></tr>
+</table>
+</td></tr>
+<tr><td id='subheadbgl'>&nbsp;</td><th id='subheadbgl'>Monday</th><th id='subheadbgl'>Tuesday</th><th id='subheadbgl'>Wednesday</th><th id='subheadbgl'>Thursday</th><th id='subheadbgl'>Friday</th></tr>
+<tr>
+<td id='bold'>&nbsp;8:00</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+</tr>
+<tr>
+<td id='bold'>&nbsp;8:55</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+</tr>
+<tr>
+<td id='bold'>&nbsp;9:50</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' bgcolor='#FFE7C6'>
+DCN455A 
+<br>T. Alam<br>T3135
+</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' bgcolor='#FFE7C6'>
+DCN455A 
+<br>T. Alam<br>T3132
+</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+</tr>
+<tr>
+<td id='bold'>10:45</td>
+<td id='bold' bgcolor='#FFFF10'>
+EAC397YD
+<br>M. Kampherm<br>S2155
+</td>
+<td id='bold' bgcolor='#FFE7C6'>
+DCN455A 
+<br>T. Alam<br>T3135
+</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' bgcolor='#FFE7C6'>
+DCN455A 
+<br>T. Alam<br>T3132
+</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+</tr>
+<tr>
+<td id='bold'>11:40</td>
+<td id='bold' bgcolor='#63C6DE'>
+SYS466B 
+<br>M. Walton<br>T3074
+</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+</tr>
+<tr>
+<td id='bold'>12:35</td>
+<td id='bold' bgcolor='#63C6DE'>
+SYS466B 
+<br>M. Walton<br>T3074
+</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+</tr>
+<tr>
+<td id='bold'>13:30</td>
+<td id='bold' bgcolor='#FF9C4A'>
+EAC237YA
+<br>M. Boyle-Taylor<br>S1201
+</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' bgcolor='#FF9C4A'>
+EAC237YA
+<br>M. Boyle-Taylor<br>S1201
+</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+</tr>
+<tr>
+<td id='bold'>14:25</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' bgcolor='#FF9C4A'>
+EAC237YA
+<br>M. Boyle-Taylor<br>S1201
+</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+</tr>
+<tr>
+<td id='bold'>15:20</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' bgcolor='#63C6DE'>
+SYS466B 
+<br>M. Walton<br>T3073
+</td>
+<td id='bold' bgcolor='#FFFF10'>
+EAC397YD
+<br>M. Kampherm<br>T3080
+</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+</tr>
+<tr>
+<td id='bold'>16:15</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' bgcolor='#63C6DE'>
+SYS466B 
+<br>M. Walton<br>T3073
+</td>
+<td id='bold' bgcolor='#FFFF10'>
+EAC397YD
+<br>M. Kampherm<br>T3080
+</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+</tr>
+<tr>
+<td id='bold'>17:10</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+</tr>
+<tr>
+<td id='bold'>18:05</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+</tr>
+<tr><th colspan='6' align='center' id='subheadbgl'>14 HOURS per week</th></tr>
+</table>
+<hr width='90%' size='2' style='color: maroon;'/>
+<hr width='90%' size='2' style='color: maroon;'/>
+
+
+                </CENTER>
+                
+                    
+                    <p align="center">
+                    <a href="#" onclick="javascript:print();"><IMG src='/webapps/sirismain/images/print.gif' border='0'></A>
+                    </p>
+                    
+                <DIV ALIGN="center">
+<P>
+<A HREF="#TOP"><IMG SRC="/webapps/sirismain/images/backtotop.gif"  border=0></A>
+</P>
+</DIV>
+
+                <div align='center'>
+<br/>
+<form name="goLogin" method="post" action="/NASApp/regwsirismain/DisplayMainMenu" target="mySiris">
+<INPUT type="image" src="/webapps/sirismain/images/return_main.gif" alt="Return to Main Menu" border='0'></p>
+<INPUT NAME='GXHC_JSESSIONID' TYPE='HIDDEN' VALUE='d8bd6e9c28fb9ae3' >
+</form>
+</div>
+
+                
+
+        
+
+
+
+<HR width='90%'>
+<div align="Center" id="fineprint">
+<br>
+If you have any questions or comments please send them to: <a href="mailto:siris@senecac.on.ca">siris@senecac.on.ca</a>
+<br>
+
+<script type="text/javascript" language="JavaScript">
+<!--
+    var theDate = new Date();                    
+    document.write("Copyright &#169 1996-" + theDate.getFullYear() + " Seneca College of Applied Arts and Technology, Toronto, Ontario, Canada<br>")
+    document.write();
+// -->
+</script>
+<br>
+</div>
+</body>
+</html>
+
+
+
+

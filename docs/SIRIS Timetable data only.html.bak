@@ -1,0 +1,309 @@
+<HTML>
+<body id="ground">
+<table border='1' width='90%' cellpadding='3' cellspacing='1'>
+<tr><td id='subheadbgl' colspan='6'>
+<table width='100%' border='0' cols='4'>
+<tr><th colspan='4' id='head2'>Timetable
+for: 2012/01/09 to 2012/02/26</th></tr>
+<tr><td id='subhead'>Name:</td><td id='subhead'>SHAUN ANDREW&nbsp;HILL</td><td id='subhead'>Date of Printing:</td><td id='subhead'>2012/03/09&nbsp;02:21:33</td></tr>
+<tr><td id='subhead'>Semester and Year:</td><td id='subhead'>Winter 2012</td><td id='subhead'>Faculty/Location:</td><td id='subhead'>STSY</td></tr>
+<tr valign="top"><td id='subhead'>Program and Semester:</td><td id='subhead'>COMPUTER PROGRAMMING AND ANALYSIS 5</td><td id='subhead'>School:</td><td id='subhead'>INFORMATION & COMMUNICATIONS TECHNOLOGY</td></tr>
+</table>
+</td></tr>
+<tr><td id='subheadbgl'>&nbsp;</td><th id='subheadbgl'>Monday</th><th id='subheadbgl'>Tuesday</th><th id='subheadbgl'>Wednesday</th><th id='subheadbgl'>Thursday</th><th id='subheadbgl'>Friday</th></tr>
+<tr>
+<td id='bold'>&nbsp;8:00</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+</tr>
+<tr>
+<td id='bold'>&nbsp;8:55</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+</tr>
+<tr>
+<td id='bold'>&nbsp;9:50</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' bgcolor='#FFE7C6'>
+DCN455A 
+<br>T. Alam<br>T3135
+</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' bgcolor='#FFE7C6'>
+DCN455A 
+<br>T. Alam<br>T3132
+</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+</tr>
+<tr>
+<td id='bold'>10:45</td>
+<td id='bold' bgcolor='#FFFF10'>
+EAC397YD
+<br>M. Kampherm<br>S2155
+</td>
+<td id='bold' bgcolor='#FFE7C6'>
+DCN455A 
+<br>T. Alam<br>T3135
+</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' bgcolor='#FFE7C6'>
+DCN455A 
+<br>T. Alam<br>T3132
+</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+</tr>
+<tr>
+<td id='bold'>11:40</td>
+<td id='bold' bgcolor='#63C6DE'>
+SYS466B 
+<br>M. Walton<br>T3074
+</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+</tr>
+<tr>
+<td id='bold'>12:35</td>
+<td id='bold' bgcolor='#63C6DE'>
+SYS466B 
+<br>M. Walton<br>T3074
+</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+</tr>
+<tr>
+<td id='bold'>13:30</td>
+<td id='bold' bgcolor='#FF9C4A'>
+EAC237YA
+<br>M. Boyle-Taylor<br>S1201
+</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' bgcolor='#FF9C4A'>
+EAC237YA
+<br>M. Boyle-Taylor<br>S1201
+</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+</tr>
+<tr>
+<td id='bold'>14:25</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' bgcolor='#FF9C4A'>
+EAC237YA
+<br>M. Boyle-Taylor<br>S1201
+</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+</tr>
+<tr>
+<td id='bold'>15:20</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' bgcolor='#63C6DE'>
+SYS466B 
+<br>M. Walton<br>T3073
+</td>
+<td id='bold' bgcolor='#FFFF10'>
+EAC397YD
+<br>M. Kampherm<br>T3080
+</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+</tr>
+<tr>
+<td id='bold'>16:15</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' bgcolor='#63C6DE'>
+SYS466B 
+<br>M. Walton<br>T3073
+</td>
+<td id='bold' bgcolor='#FFFF10'>
+EAC397YD
+<br>M. Kampherm<br>T3080
+</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+</tr>
+<tr>
+<td id='bold'>17:10</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+</tr>
+<tr>
+<td id='bold'>18:05</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+</tr>
+<tr><th colspan='6' align='center' id='subheadbgl'>14 HOURS per week</th></tr>
+</table>
+<P><div id='headsmall' align='center'>No Standard Timetable for time period: 2012/02/27 to 2012/03/04</div>
+<p><table border='1' width='90%' cellpadding='3' cellspacing='1'>
+<tr><td id='subheadbgl' colspan='6'>
+<table width='100%' border='0' cols='4'>
+<tr><th colspan='4' id='head2'>Timetable
+for: 2012/03/05 to 2012/04/22</th></tr>
+<tr><td id='subhead'>Name:</td><td id='subhead'>SHAUN ANDREW&nbsp;HILL</td><td id='subhead'>Date of Printing:</td><td id='subhead'>2012/03/09&nbsp;02:21:33</td></tr>
+<tr><td id='subhead'>Semester and Year:</td><td id='subhead'>Winter 2012</td><td id='subhead'>Faculty/Location:</td><td id='subhead'>STSY</td></tr>
+<tr valign="top"><td id='subhead'>Program and Semester:</td><td id='subhead'>COMPUTER PROGRAMMING AND ANALYSIS 5</td><td id='subhead'>School:</td><td id='subhead'>INFORMATION & COMMUNICATIONS TECHNOLOGY</td></tr>
+</table>
+</td></tr>
+<tr><td id='subheadbgl'>&nbsp;</td><th id='subheadbgl'>Monday</th><th id='subheadbgl'>Tuesday</th><th id='subheadbgl'>Wednesday</th><th id='subheadbgl'>Thursday</th><th id='subheadbgl'>Friday</th></tr>
+<tr>
+<td id='bold'>&nbsp;8:00</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+</tr>
+<tr>
+<td id='bold'>&nbsp;8:55</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+</tr>
+<tr>
+<td id='bold'>&nbsp;9:50</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' bgcolor='#FFE7C6'>
+DCN455A 
+<br>T. Alam<br>T3135
+</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' bgcolor='#FFE7C6'>
+DCN455A 
+<br>T. Alam<br>T3132
+</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+</tr>
+<tr>
+<td id='bold'>10:45</td>
+<td id='bold' bgcolor='#FFFF10'>
+EAC397YD
+<br>M. Kampherm<br>S2155
+</td>
+<td id='bold' bgcolor='#FFE7C6'>
+DCN455A 
+<br>T. Alam<br>T3135
+</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' bgcolor='#FFE7C6'>
+DCN455A 
+<br>T. Alam<br>T3132
+</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+</tr>
+<tr>
+<td id='bold'>11:40</td>
+<td id='bold' bgcolor='#63C6DE'>
+SYS466B 
+<br>M. Walton<br>T3074
+</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+</tr>
+<tr>
+<td id='bold'>12:35</td>
+<td id='bold' bgcolor='#63C6DE'>
+SYS466B 
+<br>M. Walton<br>T3074
+</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+</tr>
+<tr>
+<td id='bold'>13:30</td>
+<td id='bold' bgcolor='#FF9C4A'>
+EAC237YA
+<br>M. Boyle-Taylor<br>S1201
+</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' bgcolor='#FF9C4A'>
+EAC237YA
+<br>M. Boyle-Taylor<br>S1201
+</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+</tr>
+<tr>
+<td id='bold'>14:25</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' bgcolor='#FF9C4A'>
+EAC237YA
+<br>M. Boyle-Taylor<br>S1201
+</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+</tr>
+<tr>
+<td id='bold'>15:20</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' bgcolor='#63C6DE'>
+SYS466B 
+<br>M. Walton<br>T3073
+</td>
+<td id='bold' bgcolor='#FFFF10'>
+EAC397YD
+<br>M. Kampherm<br>T3080
+</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+</tr>
+<tr>
+<td id='bold'>16:15</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' bgcolor='#63C6DE'>
+SYS466B 
+<br>M. Walton<br>T3073
+</td>
+<td id='bold' bgcolor='#FFFF10'>
+EAC397YD
+<br>M. Kampherm<br>T3080
+</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+</tr>
+<tr>
+<td id='bold'>17:10</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+</tr>
+<tr>
+<td id='bold'>18:05</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+<td id='bold' align='center'>&nbsp;<br>-<br>&nbsp;</td>
+</tr>
+<tr><th colspan='6' align='center' id='subheadbgl'>14 HOURS per week</th></tr>
+</table>
+                </CENTER>
+</body>
+</html>
+
