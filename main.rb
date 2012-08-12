@@ -11,18 +11,6 @@ print "\n"
 extract_days(htmlDoc).each { |day| print day + "\n" }
 print "\n"
 
-#extract_timetable_data(htmlDoc).each { |column| print column + "\n" }
-#print extract_timetable_data(htmlDoc)
-#print "\n"
-
-#extract_timetable_data(htmlDoc).each {
-#  |row| row.each {
-#    |column| print column.join("\n")
-#    print "\t"
-#  }
-#  print "\n"
-#}
-
 TemplateFile = "timetable_template.html"
 f = File.open(TemplateFile, 'r')
 html_template = f.read
