@@ -1,5 +1,5 @@
-require File.dirname(__FILE__) + '/extract_data.rb'
-require File.dirname(__FILE__) + '/create_html_table.rb'
+require_relative 'extract_data'
+require_relative 'create_html_table'
 
 OriginalTimetable = "docs/SIRIS Timetable.html"
 f = File.open(OriginalTimetable, 'r')
