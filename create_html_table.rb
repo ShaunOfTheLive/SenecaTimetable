@@ -6,7 +6,7 @@ def create_html_table(table, template)
     body += " "*6 + "<tr>" + "\n"
     row.each do |column| 
       body += " "*8 + "<td>"
-      body += column.join("<br />\n" + " "*12)
+      body += column.to_a.join("<br />\n" + " "*12)
       body += "</td>" + "\n"
     end
     body += " "*6 + "</tr>" + "\n"
