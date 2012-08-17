@@ -17,7 +17,6 @@ class Timetable
         raise "Element must be a Block, or respond to 'each'"
       end
     end
-    end
   end
 
   def to_a
