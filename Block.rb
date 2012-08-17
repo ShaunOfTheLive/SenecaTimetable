@@ -6,7 +6,11 @@ class Block
     when 0
       raise "You must pass at least one argument to the constructor!"
     when 1
-      @string = args[0]
+      if args[0] == "-"
+        @string = nil
+      else
+        @string = args[0]
+      end
     when 3
       @course, @professor, @room = args
     when 4
@@ -18,7 +22,11 @@ class Block
 
   def to_a
     if defined?(@string)
-      return [@string]
+      if @string.nil?
+        return ["-"]
+      else
+        return [@string]
+      end
     else
       return [@course, @professor, @room]
     end
