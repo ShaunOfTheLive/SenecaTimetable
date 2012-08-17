@@ -1,3 +1,5 @@
+require_relative 'Block'
+
 class Timetable
   def initialize(blocks)
   #TODO: if list of lists, make each sub-list into a Block
