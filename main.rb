@@ -1,5 +1,6 @@
 require_relative 'extract_data'
 require_relative 'create_html_table'
+require_relative 'Timetable'
 
 # read local HTML into htmlDoc string
 OriginalTimetable = "docs/SIRIS Timetable.html"
@@ -23,7 +24,9 @@ html_template = f.read
 
 # extract timetable data, and feed it to create_html_table,
 # along with template
-html_out = create_html_table(extract_timetable_data(htmlDoc), html_template)
+#html_out = create_html_table(extract_timetable_data(htmlDoc), html_template)
+tt = Timetable.new(extract_timetable_data(htmlDoc))
+html_out = create_html_table(tt.to_a, html_template)
 
 #-- debug: print final HTML to console
 #print html_out
