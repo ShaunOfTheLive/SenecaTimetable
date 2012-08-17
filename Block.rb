@@ -7,12 +7,10 @@ class Block
       raise "You must pass at least one argument to the constructor!"
     when 1
       @string = args[0]
-    when 3..4
-      @course = course
-      @professor = professor
-      @room = room
+    when 3
+      @course, @professor, @room = args
     when 4
-      @colour = colour
+      @course, @professor, @room, @colour = args
     else
       raise "Illegal number of arguments!"
     end
