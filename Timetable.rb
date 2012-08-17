@@ -13,14 +13,16 @@ class Timetable
 
   # @blocks is a 2D array (rows, cols) of Blocks
     raise "Timetable must be constructed with a list!" if !blocks.respond_to?('each')
-    blocks.map do |block|
-      if block.is_a? Block
-        block
-      elsif block.respond_to?('each')
-        print block
-        Block.new(*block)
-      else
-        raise "Element must be a Block, or respond to 'each'"
+    @blocks = blocks.map do |row|
+      row.map do |cell|
+        if cell.is_a? Block
+          cell
+        elsif cell.respond_to?('each')
+          print cell
+          Block.new(*cell)
+        else
+          raise "2-deep element must be a Block, or respond to 'each'"
+        end
       end
     end
   end
