@@ -20,7 +20,7 @@ class Block
     if defined?(@string)
       return [@string]
     else
-      return [@course, @professor, @room, @colour]
+      return [@course, @professor, @room]
     end
   end
 end
