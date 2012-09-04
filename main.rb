@@ -1,11 +1,10 @@
 require_relative 'extract_data'
 require_relative 'create_html_table'
 require_relative 'Timetable'
+require_relative 'LocalReader'
 
 # read local HTML into htmlDoc string
-OriginalTimetable = "docs/SIRIS Timetable.html"
-f = File.open(OriginalTimetable, 'r')
-htmlDoc = f.read
+htmlDoc = LocalReader.read
 
 #-- extract header data and print to console (will use later)
 #-- Name, date, semester, etc.
