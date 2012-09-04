@@ -1,5 +1,5 @@
 require_relative 'Parser'
-require_relative 'create_html_table'
+require_relative 'HtmlFormatter'
 require_relative 'Timetable'
 require_relative 'LocalReader'
 
@@ -19,11 +19,11 @@ htmlDoc = LocalReader.read("docs/SIRIS Timetable.html")
 # read local template file into html_template string
 html_template = LocalReader.read("docs/timetable_template.html")
 
-# extract timetable data, and feed it to create_html_table,
+# extract timetable data, and feed it to HtmlFormatter.format,
 # along with template
-#html_out = create_html_table(Parser.parseBody(htmlDoc), html_template)
+#html_out = HtmlFormatter.format(Parser.parseBody(htmlDoc), html_template)
 tt = Timetable.new(Parser.parseBody(htmlDoc))
-html_out = create_html_table(tt.to_a, html_template)
+html_out = HtmlFormatter.format(tt.to_a, html_template)
 
 #-- debug: print final HTML to console
 #print html_out
