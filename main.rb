@@ -4,7 +4,7 @@ require_relative 'Timetable'
 require_relative 'LocalReader'
 
 # read local HTML into htmlDoc string
-htmlDoc = LocalReader.read
+htmlDoc = LocalReader.read("docs/SIRIS Timetable.html")
 
 #-- extract header data and print to console (will use later)
 #-- Name, date, semester, etc.
@@ -17,9 +17,7 @@ htmlDoc = LocalReader.read
 #print "\n"
 
 # read local template file into html_template string
-TemplateFile = "docs/timetable_template.html"
-f = File.open(TemplateFile, 'r')
-html_template = f.read
+html_template = LocalReader.read("docs/timetable_template.html")
 
 # extract timetable data, and feed it to create_html_table,
 # along with template

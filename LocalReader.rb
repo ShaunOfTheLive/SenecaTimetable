@@ -1,5 +1,5 @@
 class LocalReader
-  def self.read(inputFile = "docs/SIRIS Timetable.html")
+  def self.read(inputFile)
     f = File.open(inputFile, 'r')
     return f.read
   end
