@@ -18,7 +18,6 @@ class Timetable
         if cell.is_a? Block
           cell
         elsif cell.respond_to?('each')
-          print cell
           Block.new(*cell)
         else
           raise "2-deep element must be a Block, or respond to 'each'"
