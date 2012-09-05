@@ -22,13 +22,8 @@ htmlDoc = LocalReader.read("docs/SIRIS Timetable.html")
 #Parser.parseDays(htmlDoc).each { |day| print day + "\n" }
 #print "\n"
 
-# read local template file into html_template string
-html_template = LocalReader.read("docs/timetable_template.html")
-
-# extract timetable data, and feed it to HtmlFormatter.format,
-# along with template
-#html_out = HtmlFormatter.format(Parser.parseBody(htmlDoc), html_template)
 tt = Timetable.new(Parser.parseBody(htmlDoc))
+html_template = LocalReader.read("docs/timetable_template.html")
 html_out = HtmlFormatter.format(tt.to_a, html_template)
 
 #-- debug: print final HTML to console
