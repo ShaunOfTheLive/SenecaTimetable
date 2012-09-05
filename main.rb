@@ -8,6 +8,8 @@ require_relative 'Timetable'
 # formatters
 require_relative 'HtmlFormatter'
 
+require_relative 'LocalWriter'
+
 
 # read local HTML into htmlDoc string
 htmlDoc = LocalReader.read("docs/SIRIS Timetable.html")
@@ -26,10 +28,4 @@ tt = Timetable.new(Parser.parseBody(htmlDoc))
 html_template = LocalReader.read("docs/timetable_template.html")
 html_out = HtmlFormatter.format(tt.to_a, html_template)
 
-#-- debug: print final HTML to console
-#print html_out
-
-# output final HTML to table_out.html file
-OutFile = "docs/table_out.html"
-fout = File.open(OutFile, 'w')
-fout.puts html_out
+LocalWriter.write("docs/table_out.html", html_out)
