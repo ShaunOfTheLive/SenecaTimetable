@@ -1,15 +1,11 @@
 # readers
 require_relative 'LocalReader'
-
 require_relative 'Parser'
-
 require_relative 'Timetable'
 
 # formatters
 require_relative 'HtmlFormatter'
-
 require_relative 'LocalWriter'
-
 
 # read local HTML into htmlDoc string
 htmlDoc = LocalReader.read("docs/SIRIS Timetable.html")
