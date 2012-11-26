@@ -1,8 +1,8 @@
 require_relative 'Event'
 
 class Timetable
-  # @eventHash is a hash[array[Day, Time]] of Events
-  @eventHash
+  # @eventHash:
+  #   a hash[array[Day, Time]] of Events
 
   def initialize(events)
   # acceptable inputs:
