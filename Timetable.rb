@@ -1,35 +1,35 @@
-require_relative 'Block'
+require_relative 'Event'
 
 class Timetable
-  # @blocks is a 2D array (rows, cols) of Blocks
-  @blocks
+  # @eventHash is a hash[array[Day, Time]] of Events
+  @eventHash
 
-  def initialize(blocks)
+  def initialize(events)
   # acceptable inputs:
-  # blocks: a 2D array of Blocks, or a 2D array of Arrays
-  # (Arrays will be converted into Blocks)
+  # events: a 2D array of Events, or a 2D array of Arrays
+  # (Arrays will be converted into Events)
 
   # TODO: for each 2-deep element, we must check whether it's enumerable
-  # and if it is, use it to construct a Block
-  # or check if it's already a Block
+  # and if it is, use it to construct a Event
+  # or check if it's already a Event
   # otherwise, throw an exception
 
-    raise "Timetable must be constructed with a list!" if !blocks.respond_to?('each')
-    @blocks = blocks.map do |row|
+    raise "Timetable must be constructed with a list!" if !events.respond_to?('each')
+    @eventHash = events.map do |row|
       row.map do |cell|
-        if cell.is_a? Block
+        if cell.is_a? Event
           cell
         elsif cell.respond_to?('each')
-          Block.new(*cell)
+          Event.new(*cell)
         else
-          raise "2-deep element must be a Block, or respond to 'each'"
+          raise "2-deep element must be a Event, or respond to 'each'"
         end
       end
     end
   end
 
   def to_a
-    @blocks
+    @eventHash
   end
 end
 
