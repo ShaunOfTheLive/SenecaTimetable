@@ -8,16 +8,9 @@ class Event
     @description = description
   end
 
-  def to_a
-    if defined?(@string)
-      if @string.nil?
-        return ["-"]
-      else
-        return [@string]
-      end
-    else
-      return [@course, @professor, @room]
-    end
+  def to_csv
+    array = [@day, @startTime, @endTime, @description]
+    return array.join(", ")
   end
 end
 

@@ -8,6 +8,8 @@ class Timetable
   # @courseHash:
   #   a hash[subject] of Courses
 
+  @days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+
   def addEvent(day, startTime, endTime, description=nil)
     eventHash[[day, startTime]] = new Event(day, startTime, startTime+45*60, description)
   end
@@ -41,8 +43,8 @@ class Timetable
     events.map do |row|
       # TODO: put proper Time constructor here
       # startTime = row.shift
-      days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
-      row.zip(days).map do |cell, day|
+
+      row.zip(@days).map do |cell, day|
         event
         if cell.is_a? Event
           event = cell
@@ -61,7 +63,6 @@ class Timetable
             subject, teacher, room, colour = cell if cell.length == 4
             course = addCourse(subject, teacher)
             addCourseEvent(day, startTime, startTime+45*60, course, room)
-            end
           else
             raise "Illegal number of elements in cell!"
           end
@@ -74,8 +75,12 @@ class Timetable
     end
   end
 
-  def to_a
-    @eventHash
+  def to_csv
+    array = new Array
+    sorted_keys = @eventHash.keys.sort_by{ |a,b| [days.find_index(a), b] }
+    sorted_values = @eventHash.values_at{sorted_keys}
+    array = sorted_values.map{ |event| event.to_csv}
+    return array.join(", ")
   end
 end
 
