@@ -1,4 +1,4 @@
-class Block
+class Event
   attr_accessor :course, :professor, :room, :colour, :string
 
   def initialize(*args)
