@@ -12,6 +12,9 @@ htmlDoc = LocalReader.read("docs/SIRIS Timetable.html")
 
 tt = Timetable.new(Parser.parseBody(htmlDoc))
 html_template = LocalReader.read("docs/timetable_template.html")
-html_out = HtmlFormatter.format(tt.to_a, html_template)
+#this is using old to_a method
+#html_out = HtmlFormatter.format(tt.to_a, html_template)
 
-LocalWriter.write("docs/table_out.html", html_out)
+#LocalWriter.write("docs/table_out.html", html_out)
+
+puts tt.to_csv
