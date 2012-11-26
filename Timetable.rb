@@ -19,6 +19,11 @@ class Timetable
     else
       courseHash[subject] = new Course(subject, teacher)
     end
+    return courseHash[subject]
+  end
+  
+  def getCourse(subject)
+    return courseHash[subject]
   end
   
   def addCourseEvent(day, startTime, endTime, subject, room, description=nil)
