@@ -1,5 +1,6 @@
 require_relative 'Event'
 require_relative 'Course'
+#require_relative 'Parser' # delete this when we move list processing code out
 
 class Timetable
   # @eventHash:
@@ -40,7 +41,8 @@ class Timetable
     events.map do |row|
       # TODO: put proper Time constructor here
       # startTime = row.shift
-      row.map do |cell|
+      days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+      row.zip(days).map do |cell, day|
         event
         if cell.is_a? Event
           event = cell
