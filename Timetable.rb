@@ -29,7 +29,10 @@ class Timetable
             if args[0] == "-"
               # do nothing; no object will be created
             else
-              # description = args[0]
+              ## create new standard Event with description
+              ## assume endTime is startTime+45min for now (?)
+              # eventHash[[day, startTime]] = new Event(
+              #  day, startTime, startTime+45min, args[0])
             end
           when 3, 4
             subject, teacher, room = cell if cell.length == 3
