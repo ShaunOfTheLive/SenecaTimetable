@@ -54,10 +54,7 @@ class Timetable
             if args[0] == "-"
               # do nothing; no object will be created
             else
-              ## create new standard Event with description
-              ## assume endTime is startTime+45*60 for now (?)
-              # eventHash[[day, startTime]] = new Event(
-              #  day, startTime, startTime+45*60, args[0])
+              eventHash[[day, startTime]] = new Event(day, startTime, startTime+45*60, args[0])
             end
           when 3, 4
             subject, teacher, room = cell if cell.length == 3
