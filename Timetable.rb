@@ -7,6 +7,24 @@ class Timetable
   # @courseHash:
   #   a hash[subject] of Courses
 
+  def addEvent(day, startTime, endTime, description=nil)
+    eventHash[[day, startTime]] = new Event(day, startTime, startTime+45*60, description)
+  end
+  
+  def addCourse(subject, teacher)
+    if courseHash.has_key?(subject)
+      if teacher != courseHash[subject].teacher
+        raise "Same course subject defined twice with different teacher!"
+      end
+    else
+      courseHash[subject] = new Course(subject, teacher)
+    end
+  end
+  
+  def addCourseEvent(day, startTime, endTime, subject, room, description=nil)
+    eventHash[[day, startTime]] = new CourseEvent(day, startTime, startTime+45*60, courseHash[subject], room)
+  end
+
   def initialize(events)
   # acceptable inputs:
   # events: a 2D array of Events, or a 2D array of Arrays
@@ -30,21 +48,15 @@ class Timetable
               # do nothing; no object will be created
             else
               ## create new standard Event with description
-              ## assume endTime is startTime+45min for now (?)
+              ## assume endTime is startTime+45*60 for now (?)
               # eventHash[[day, startTime]] = new Event(
-              #  day, startTime, startTime+45min, args[0])
+              #  day, startTime, startTime+45*60, args[0])
             end
           when 3, 4
             subject, teacher, room = cell if cell.length == 3
             subject, teacher, room, colour = cell if cell.length == 4
-            if courseHash.has_key?(subject)
-              if teacher != courseHash[subject].teacher
-                raise "Same course subject defined twice with different teacher!"
-              end
-            else
-              courseHash[subject] = new Course(subject, teacher)
-              # eventHash[[day, startTime]] = new CourseEvent(
-              #   day, startTime, startTime+45min, courseHash[subject], room)
+            course = addCourse(subject, teacher)
+            addCourseEvent(day, startTime, startTime+45*60, course, room)
             end
           else
             raise "Illegal number of elements in cell!"
