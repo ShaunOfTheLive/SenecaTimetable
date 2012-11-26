@@ -1,5 +1,4 @@
 class Course
-  @subject
-  @teacher
+  attr_accessor :subject, :teacher
 end
 

@@ -1,23 +1,11 @@
 class Event
-  attr_accessor :course, :professor, :room, :colour, :string
+  attr_accessor :day, :startTime, :endTime, :description
 
-  def initialize(*args)
-    case args.length
-    when 0
-      raise "You must pass at least one argument to the constructor!"
-    when 1
-      if args[0] == "-"
-        @string = nil
-      else
-        @string = args[0]
-      end
-    when 3
-      @course, @professor, @room = args
-    when 4
-      @course, @professor, @room, @colour = args
-    else
-      raise "Illegal number of arguments!"
-    end
+  def initialize(day, startTime, endTime, description=nil)
+    @day = day
+    @startTime = startTime
+    @endTime = endTime
+    @description = description
   end
 
   def to_a
