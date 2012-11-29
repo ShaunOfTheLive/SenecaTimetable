@@ -16,7 +16,11 @@ class Timetable
   @@days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
 
   def addEvent(day, startTime, endTime, description=nil)
-    @eventHash[[day, startTime]] = Event.new(day, startTime, startTime+45*60, description)
+    @eventHash[[day, startTime]] = Event.new(day, startTime, startTime+50*60, description)
+  end
+  
+  def addCourseEvent(day, startTime, endTime, subject, room, description=nil)
+    @eventHash[[day, startTime]] = CourseEvent.new(day, startTime, startTime+50*60, @courseHash[subject], room)
   end
   
   def addCourse(subject, teacher)
@@ -34,8 +38,8 @@ class Timetable
     return @courseHash[subject]
   end
   
-  def addCourseEvent(day, startTime, endTime, subject, room, description=nil)
-    @eventHash[[day, startTime]] = CourseEvent.new(day, startTime, startTime+45*60, @courseHash[subject], room)
+  def getCourseList
+    #TODO
   end
 
   def initialize(events)
@@ -70,7 +74,7 @@ class Timetable
             subject, teacher, room = cell if cell.length == 3
             subject, teacher, room, colour = cell if cell.length == 4
             course = addCourse(subject, teacher)
-            addCourseEvent(day, startTime, startTime+45*60, course, room)
+            addCourseEvent(day, startTime, startTime+45*60, course.subject, room)
           else
             raise "Illegal number of elements in cell!"
           end
@@ -84,9 +88,19 @@ class Timetable
   def to_csv
     array = Array.new
     sorted_keys = @eventHash.keys.sort_by{ |a,b| [@@days.find_index(a), b] }
-    sorted_values = @eventHash.values_at{sorted_keys}
+=begin 
+    puts "###KEYS\n"
+    puts sorted_keys
+    puts "###END KEYS\n"
+=end
+    sorted_values = @eventHash.values_at(*sorted_keys)
+=begin
+    puts "###VALUES\n"
+    puts sorted_values
+    puts "###END VALUES\n"
+=end
     array = sorted_values.map{ |event| event.to_csv}
-    return array.join(", ")
+    return array.join("\n")
   end
 end
 
