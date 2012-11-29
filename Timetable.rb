@@ -1,5 +1,8 @@
+require 'time'
+
 require_relative 'Event'
 require_relative 'Course'
+require_relative 'CourseEvent'
 #require_relative 'Parser' # delete this when we move list processing code out
 
 class Timetable
@@ -8,29 +11,31 @@ class Timetable
   # @courseHash:
   #   a hash[subject] of Courses
 
-  @days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+
+
+  @@days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
 
   def addEvent(day, startTime, endTime, description=nil)
-    eventHash[[day, startTime]] = new Event(day, startTime, startTime+45*60, description)
+    @eventHash[[day, startTime]] = Event.new(day, startTime, startTime+45*60, description)
   end
   
   def addCourse(subject, teacher)
-    if courseHash.has_key?(subject)
-      if teacher != courseHash[subject].teacher
+    if @courseHash.has_key?(subject)
+      if teacher != @courseHash[subject].teacher
         raise "Same course subject defined twice with different teacher!"
       end
     else
-      courseHash[subject] = new Course(subject, teacher)
+      @courseHash[subject] = Course.new(subject, teacher)
     end
-    return courseHash[subject]
+    return @courseHash[subject]
   end
   
   def getCourse(subject)
-    return courseHash[subject]
+    return @courseHash[subject]
   end
   
   def addCourseEvent(day, startTime, endTime, subject, room, description=nil)
-    eventHash[[day, startTime]] = new CourseEvent(day, startTime, startTime+45*60, courseHash[subject], room)
+    @eventHash[[day, startTime]] = CourseEvent.new(day, startTime, startTime+45*60, @courseHash[subject], room)
   end
 
   def initialize(events)
@@ -39,13 +44,16 @@ class Timetable
   # (Arrays will be converted into Events)
 
     raise "Timetable must be constructed with a list!" if !events.respond_to?('each')
-    @eventHash = new Hash
+    
+    @eventHash = Hash.new
+    @courseHash = Hash.new
+    
     events.map do |row|
-      # TODO: put proper Time constructor here
-      # startTime = row.shift
 
-      row.zip(@days).map do |cell, day|
-        event
+      startTime = Time.parse(row.shift.join)
+
+      row.zip(@@days).map do |cell, day|
+        event = nil
         if cell.is_a? Event
           event = cell
         elsif cell.respond_to?('each')
@@ -53,10 +61,10 @@ class Timetable
           when 0
             raise "Cell must contain at least one element!"
           when 1
-            if args[0] == "-"
+            if cell[0] == "-"
               # do nothing; no object will be created
             else
-              eventHash[[day, startTime]] = new Event(day, startTime, startTime+45*60, args[0])
+              addEvent(day, startTime, startTime+45*60, cell[0])
             end
           when 3, 4
             subject, teacher, room = cell if cell.length == 3
@@ -66,18 +74,16 @@ class Timetable
           else
             raise "Illegal number of elements in cell!"
           end
-          event = Event.new(*cell)
         else
           raise "2-deep element must be an Event, or respond to 'each'"
         end
-        @eventHash[[event.day(), event.startTime()]] = event;
       end
     end
   end
 
   def to_csv
-    array = new Array
-    sorted_keys = @eventHash.keys.sort_by{ |a,b| [days.find_index(a), b] }
+    array = Array.new
+    sorted_keys = @eventHash.keys.sort_by{ |a,b| [@@days.find_index(a), b] }
     sorted_values = @eventHash.values_at{sorted_keys}
     array = sorted_values.map{ |event| event.to_csv}
     return array.join(", ")
